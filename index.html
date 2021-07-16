@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Project 78</title>
+    </head>
+    <body>
+        <img src = "https://img.freepik.com/free-vector/cute-teddy-polar-bear-friends-greeting-cartoon-doodle-card_40564-503.jpg?size=626&ext=jpg" style = "width: 30%;" id = "family_member_image">
+        <h4 id = "family_member_name"></h4>
+        <button onclick = "update();">Next</button>
+        <script>
+            var image = ["https://img.freepik.com/free-vector/cute-teddy-polar-bear-friends-greeting-cartoon-doodle-card_40564-503.jpg?size=626&ext=jpg", "https://i.pinimg.com/originals/a1/c2/bc/a1c2bc4c83d8d357ae38cd95d7d7093b.jpg", "https://static.wikia.nocookie.net/disney/images/8/8b/Wind_Rises_Screenshot_1190.jpg/revision/latest?cb=20171102235254", "https://i.pinimg.com/originals/c5/10/28/c51028dfc3743559eee9c01a273c7d55.gif", "https://static.wikia.nocookie.net/goanimate-v2/images/8/8b/The.Borrower.Arrietty.2010.BluRay.1080p.DTS.3Audio.x264-CHD.mkv_snapshot_00.06.55_-2013.08.21_23.15.50-.jpg/revision/latest?cb=20141124193631", "https://i.pinimg.com/originals/53/66/0b/53660b968e5dac4aa9fa806db123a2cf.png"];
+            var names = ["Family Book", "Anita(Mom)", "Jaya(Dad)", "Caro(My Sister)", "Natania(Me)", "Hades and Persephone(The fish)"];
+            var i = 0; 
+            function update()
+            {
+                i++; 
+                var numbers_of_family_member_in_array = 6
+                if(i > numbers_of_family_member_in_array)
+                {
+                    i = 0;
+                }
+                var updatedImage = image[i]; 
+                var updatedName = names[i]; 
+                document.getElementById("family_member_image").src = updatedImage; 
+                document.getElementById("family_member_name").innerHTML = updatedName;
+            }
+        </script>
+    </body>
+</html>
